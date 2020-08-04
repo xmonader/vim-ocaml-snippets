@@ -1,0 +1,108 @@
+snippet op
+	open ${1:module} ;;
+
+snippet val
+	val ${1:name} : ${2:arg2}
+
+snippet var
+	let ${1:x} = ${2:y} 
+
+snippet fun
+	let ${1:fname} ${2:args} = ${3:expr}
+
+snippet recfun
+	let rec ${1:fname} ${2:args} = ${3:expr}
+
+snippet if
+	if ${1}
+		then ${2} 
+		
+snippet el
+	else ${1}
+
+snippet ifelse
+	if ${1}
+		then ${2}
+		else ${3}
+
+
+snippet tup
+	let ${1:tuple} = (${2:vals})
+
+snippet lis
+	let ${1:list} = [${2:vals} ]	
+
+snippet m 
+	match ${1:el} with
+		| ${2:case1} -> ${3:action}
+		| ${4:case2} -> ${5:action}
+
+snippet |
+	|${1:case} -> ${2:action}
+
+
+snippet mopt
+	match ${1:el} with
+		| Some ${2:case1} -> ${3:action}
+		| None -> ${4:action}
+
+
+snippet letin
+	let ${1:var} in
+		${2:expr}
+
+snippet rec
+	type ${1:recordtype} = ${ ${2:vals}}
+
+snippet type
+	type ${1:typename} =
+		| ${2:First} of ${3:subtypes}
+		| ${3:Second} of ${4:subtypes}
+
+snippet letarr
+	let ${1:var} = [| ${2:vals} |]
+
+snippet letref
+	let ${1:var} = ref ${2:contents}
+
+snippet for
+	for ${1:i} to ${2:count} do
+		${3:expr}
+	done
+
+
+snippet while
+	while ${1} do
+		${2}
+	done
+
+snippet call
+	${1:module}.${2:function} ${3:args}
+
+
+
+snippet obj
+	let ${1:x} =
+	object
+		${2:body}
+	end;;
+	
+snippet meth
+	method ${1:methodname} ${2:args} = ${3:expr} 
+
+snippet class
+	class ${1:classname}=
+	object
+		${2:body}
+	
+	end;;
+	
+snippet new
+	let ${1:objectname} = new ${2:class}
+	
+
+snippet mut
+	val mutable ${1:x}
+
+snippet com
+	(* ${1:comment} *)
